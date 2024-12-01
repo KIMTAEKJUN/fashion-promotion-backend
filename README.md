@@ -91,23 +91,14 @@ src/
 **다이어그램으로 수정 예정.**
 ```plantuml
 [ Presentation Layer ]    -> 컨트롤러, 요청/응답 DTO
-   - 클라이언트의 요청을 받고 Facade 계층에 전달.
-   - RESTful API 설계 원칙을 준수하여 응답 반환.
          ↓
 [  Facade Layer  ]        -> 단일 진입점, 여러 서비스 조합
-   - 복잡한 비즈니스 로직을 단순화하고 캡슐화.
-   - 여러 도메인의 서비스 호출을 조합하여 API를 구현.
          ↓
 [ Domain Layer ]          -> 엔티티, 비즈니스 로직, 서비스, 리포지토리
-   - 핵심 비즈니스 로직과 데이터베이스 연동.
-   - 각 도메인에 독립적인 로직을 정의.
          ↓
 [ Infrastructure Layer ]  -> 데이터베이스 연동, 외부 API 통신
-   - 외부 API(Firebase, Coolsms)와 데이터베이스(PostgreSQL) 연동 처리.
          ↓
 [ Global Layer ]          -> 전역 설정, 예외 처리, 유틸리티
-   - 전역적으로 공통 설정 및 예외 처리를 담당.
-   - 유틸리티 클래스 및 보안 관련 설정 포함.
 ```
 
 <br>
